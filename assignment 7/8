@@ -1,0 +1,31 @@
+// next prime number
+#include<stdio.h>
+int main()
+{
+    int n , i , j , count ;
+    printf("enter a number to print it's next prime number");
+    scanf("%d",&n);
+
+    for( i = n ; i<=100 ; i++)
+    {
+      count = 0;
+
+      for(j=2 ; j<=i/2; j++)
+      {
+          if(i%j==0)
+          {
+              count++;
+              break;
+          }
+
+      }
+
+      if(count==0)
+      {
+          printf("%d",i);
+          break;
+      }
+    }
+
+    return 0;
+}
