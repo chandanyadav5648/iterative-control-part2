@@ -1,0 +1,35 @@
+//write a program co pime or not of two numbers
+#include<stdio.h>
+int main()
+{
+    int a , b , lcm , hcf ;
+    printf("enter two numbers to check coprime or not:");
+    scanf("%d%d",&a,&b);
+    printf("a=%d,b=%d",a,b);
+    printf("\n");
+
+    for(int i=1 ; i<=a*b ;i++)
+    {
+        if((i%a==0) && (i%b==0))
+        { lcm=i;
+            break;
+        }
+    }
+
+    hcf =(a * b) / lcm ;
+
+    if(hcf==1)
+    {
+            printf("%d and %d is coprime number",a,b);
+    }
+    else
+    {
+        printf("not a coprime number");
+    }
+
+
+
+    return 0;
+}
+
+
